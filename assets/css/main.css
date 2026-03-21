@@ -25,6 +25,14 @@ section, summary, time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;}
 
+/* This targets the images inside your project spans */
+.image.fit img {
+    width: 100%;
+    height: 175px;       /* Set a fixed height that looks good for your grid */
+    object-fit: cover;   /* This is the magic: it crops the image to fill the space without stretching */
+    object-position: center; /* Ensures the middle of the photo is visible */
+}
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
@@ -2815,7 +2823,7 @@ input, select, textarea {
 /* Main */
 
 	.main {
-		padding: 6em 0 4em 0 ;
+		padding: 3em 0 1em 0 ;
 	}
 
 		.main.style1 {
