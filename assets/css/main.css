@@ -33,6 +33,47 @@ section, summary, time, mark, audio, video {
     object-position: center; /* Ensures the middle of the photo is visible */
 }
 
+/* Style for the circular headshot */
+.image.headshot {
+    display: inline-block;
+    margin-bottom: 1.5em;
+}
+
+.image.headshot img {
+    width: 150px;
+    height: 150px;
+    border-radius: 0%; /* Makes it circular */
+    border: 3px solid rgba(255, 255, 255, 0.5); /* Subtle white border */
+    object-fit: cover; /* Prevents stretching */
+}
+
+/* Horizontal contact bar */
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 1em 0 2em 0;
+}
+
+.contact-info li {
+    display: inline-block;
+    margin: 0 1.5em;
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.contact-info li i {
+    margin-right: 0.5em;
+    color: #fff;
+}
+
+/* Mobile responsive fix for contact info */
+@media screen and (max-width: 736px) {
+    .contact-info li {
+        display: block;
+        margin: 0.5em 0;
+    }
+}
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
@@ -2372,6 +2413,16 @@ input, select, textarea {
 			display: block;
 		}
 
+		.image.small img{
+			display: block;
+			margin-left: auto;
+			margin-right: auto; /* Optional: set a width so you can see the centering */
+			}
+
+		.image.small img {
+			width: 20%;
+		}
+
 		.image.left {
 			float: left;
 			padding: 0 1.5em 1em 0;
@@ -2389,9 +2440,15 @@ input, select, textarea {
 		}
 
 			.image.left img, .image.right img {
-				width: 100%;
+				width: 75%;
 			}
 
+		.image.headshot {
+			border-radius: 4px;
+			display: block;
+		}
+
+		
 		.image.fit {
 			display: block;
 			margin: 0 0 2em 0;
